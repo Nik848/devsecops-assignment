@@ -1,0 +1,18 @@
+
+const express = require("express");
+
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("DevSecOps CI/CD Pipeline Running Successfully!");
+});
+
+app.get("/health", (req, res) => {
+    res.json({ status: "healthy" });
+});
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
